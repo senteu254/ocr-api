@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ocr-api
+    env: php
+    buildCommand: ""
+    startCommand: ""
+    plan: free
+    rootDir: .
+    envVars: []
