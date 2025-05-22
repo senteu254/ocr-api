@@ -18,14 +18,6 @@ if ($mime === 'application/pdf') {
     $cmd = "convert -density 300 " . escapeshellarg($tmp) . "[0] -depth 8 -background white -alpha off " . escapeshellarg($tempPng);
     exec($cmd);
     file_put_contents('/tmp/ocr_debug.txt', "Running convert command:\n$cmd\n", FILE_APPEND);
-    if (!file_exists($tempPng)) {
-        file_put_contents('/tmp/ocr_debug.txt', "❌ PNG was not created.\n", FILE_APPEND);
-        echo json_encode(['error' => 'PDF conversion failed']);
-        exit;
-    } else {
-        file_put_contents('/tmp/ocr_debug.txt', "✅ PNG created: $tempPng\n", FILE_APPEND);
-    }
-    
 
 
     if (!file_exists($tempPng)) {
