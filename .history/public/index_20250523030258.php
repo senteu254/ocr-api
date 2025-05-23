@@ -20,7 +20,7 @@ function cleanUp($files) {
 
 if ($mime === 'application/pdf') {
     $outputPrefix = sys_get_temp_dir() . '/page';
-    $cmd = "convert -density 600 " . escapeshellarg($tmp) . " -depth 8 -background white -alpha off -resize 2480x3508 " . escapeshellarg($outputPrefix) . "-%03d.png";
+    $cmd = "convert -density 300 " . escapeshellarg($tmp) . " -depth 8 -background white -alpha off -resize 2480x3508 " . escapeshellarg($outputPrefix) . "-%03d.png";
     exec($cmd, $output, $code);
 
     $pageFiles = glob($outputPrefix . "-*.png");
