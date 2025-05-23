@@ -1,1 +1,0 @@
-* * * * * php /var/www/html/worker.php >> /var/log/ocr_worker.log 2>&1
