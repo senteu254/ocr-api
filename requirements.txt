@@ -1,7 +1,4 @@
-aiofiles==23.2.1
-fastapi==0.110.0
-pydantic==2.6.4
-python-multipart==0.0.9
-starlette==0.36.3
-typing-extensions==4.11.0
-uvicorn==0.29.0
+Flask
+pytesseract
+pdf2image
+pillow
