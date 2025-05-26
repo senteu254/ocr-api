@@ -6,8 +6,6 @@ services:
     region: oregon
     branch: main
     dockerfilePath: ./Dockerfile
-    healthCheckPath: /health
-
     buildFilter:
       paths:
         - Dockerfile
@@ -18,5 +16,3 @@ services:
     envVars:
       - key: PYTHONUNBUFFERED
         value: "1"
-
-        
